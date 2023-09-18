@@ -14,52 +14,26 @@ import {NgIf} from '@angular/common';
 })
 
 
-  // // atributos da minha classe
-  // export interface objData {
-  //   eventoNome: string;
-  //   eventoDataInicio: Date;
-  //   eventoDataFim: Date;
-  //   eventoLocal: string;
-  //   eventoConvidados: number;
-  //   eventoAtivo: boolean;
-  //   // Fim dos atributos
-  // }
 
 export class EventoComponent {
-  // atributos da minha classe
-      eventoNome: string;
-      eventoDataInicio: Date;
-      eventoDataFim: Date;
-      eventoLocal: string;
-      eventoConvidados: number;
-      eventoAtivo: boolean;
-    // Fim dos atributos
+
 
   constructor(
   private dialog: MatDialog,
-  public formEvento: DialogoAtributos) {
-    this.eventoNome = "teste01";
-    this.eventoDataInicio = new Date();
-    this.eventoDataFim =  new Date();
-    this.eventoLocal = "";
-    this.eventoConvidados = 0;
-    this.eventoAtivo = false;
-    // fbEvento.nome = "Teste - 001";
-  }
+  public objEvento: DialogoAtributos) {}
+
 
    // Inicio do metodo abreDialogo()
   abreDialogo(): void {
     const referenciaDialogo = this.dialog.open(EventoDialogoComponent,{
-      data:{ nome: this.eventoNome,
-            dataInicio: this.eventoDataInicio,
-            dataFim: this.eventoDataFim,
-            local: this.eventoLocal,
-            convidados: this.eventoConvidados,
-            ativo: this.eventoAtivo}
+      data: this.objEvento // Passo o modelo de atributos para o data do dialog
     });
 
     referenciaDialogo.afterClosed().subscribe(result => {
-      console.log(`Diálogo fechado com resultado: ${result}`);
+      // if (result.nome) {this.eventoNome = result.nome}
+      // if (result.local) {this.eventoLocal = result.local}
+      this.objEvento = result
+      console.log(`Diálogo fechado com resultado:` + JSON.stringify(Object.entries(result), null, 2));
     });
 
   }
