@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DialogoComponent } from './dialogo.component';
+import { EventoComponent } from './evento.component';
 
 describe('DialogoComponent', () => {
-  let component: DialogoComponent;
-  let fixture: ComponentFixture<DialogoComponent>;
+  let component: EventoComponent;
+  let fixture: ComponentFixture<EventoComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DialogoComponent]
+      declarations: [EventoComponent]
     });
-    fixture = TestBed.createComponent(DialogoComponent);
+    fixture = TestBed.createComponent(EventoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -29,12 +29,16 @@ import { ArvoreComponent } from './arvore/arvore.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { ArrastaSoltaComponent } from './arrasta-solta/arrasta-solta.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { DialogoComponent } from './dialogo/dialogo.component';
-import { ComponenteDialogoComponent } from './componente-dialogo/componente-dialogo.component';
+import { EventoComponent } from './evento/evento.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import {EventoDialogoComponent} from './evento/evento-dialogo/evento-dialogo.component'
+import {DialogoAtributos} from '../app/evento/dialogo-atributos.model'
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    EventoDialogoComponent,
     Teste01Component,
     HomeComponent,
     Teste02Component,
@@ -42,17 +46,17 @@ import { ComponenteDialogoComponent } from './componente-dialogo/componente-dial
     DashboardComponent,
     ArvoreComponent,
     ArrastaSoltaComponent,
-    DialogoComponent,
-    ComponenteDialogoComponent
+    EventoComponent
 
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
+    MatDialogModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatInputModule,
-    MatButtonModule,
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
@@ -69,7 +73,7 @@ import { ComponenteDialogoComponent } from './componente-dialogo/componente-dial
     MatTreeModule,
     DragDropModule
   ],
-  providers: [],
+  providers: [DialogoAtributos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
