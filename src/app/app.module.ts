@@ -25,6 +25,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { ArvoreComponent } from './arvore/arvore.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { ArrastaSoltaComponent } from './arrasta-solta/arrasta-solta.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { MatMenuModule } from '@angular/material/menu';
     HomeComponent,
     Teste02Component,
     TabelasComponent,
-    DashboardComponent
+    DashboardComponent,
+    ArvoreComponent,
+    ArrastaSoltaComponent
 
   ],
   imports: [
@@ -55,7 +61,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatPaginatorModule,
     MatSortModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTreeModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
