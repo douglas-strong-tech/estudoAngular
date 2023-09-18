@@ -29,6 +29,8 @@ import { ArvoreComponent } from './arvore/arvore.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { ArrastaSoltaComponent } from './arrasta-solta/arrasta-solta.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DialogoComponent } from './dialogo/dialogo.component';
+import { ComponenteDialogoComponent } from './componente-dialogo/componente-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     TabelasComponent,
     DashboardComponent,
     ArvoreComponent,
-    ArrastaSoltaComponent
+    ArrastaSoltaComponent,
+    DialogoComponent,
+    ComponenteDialogoComponent
 
   ],
   imports: [
